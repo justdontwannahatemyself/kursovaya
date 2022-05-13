@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="712.0" prefWidth="1128.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.kursovaya.AppController">
+    <center>
+        <LineChart fx:id="chart" alternativeRowFillVisible="false" animated="false" axisSortingPolicy="NONE" createSymbols="false" depthTest="DISABLE" layoutX="25.0" layoutY="48.0" prefHeight="470.0" prefWidth="305.0">
+            <xAxis>
+                <NumberAxis animated="false" autoRanging="false" side="BOTTOM" tickUnit="2.0" fx:id="xAxis" />
+            </xAxis>
+            <yAxis>
+                <NumberAxis fx:id="yAxis" autoRanging="false" forceZeroInRange="false" mouseTransparent="true" side="LEFT" />
+            </yAxis>
+        </LineChart>
+    </center>
+    <bottom>
+        <Pane prefHeight="77.0" prefWidth="1128.0" BorderPane.alignment="CENTER">
+            <children>
+                <Button layoutX="450.0" layoutY="29.0" mnemonicParsing="false" onAction="#addDiffractograms" prefHeight="35.0" prefWidth="229.0" text="Get diffractogram" />
+
+                <Label fx:id="label" layoutX="417.0" layoutY="6.0" prefHeight="17.0" prefWidth="294.0" textAlignment="CENTER" />
+            </children>
+        </Pane>
+    </bottom>
+    <top>
+        <MenuBar>
+            <Menu>
+                <graphic>
+                    <Label onMouseClicked="#newPointClick" text="Поставить новую опорную точку" />
+                </graphic>
+            </Menu>
+            <Menu>
+                <graphic>
+                    <Label onMouseClicked="#pointEdit" text="Редактировать и сделать опорной" />
+                </graphic>
+            </Menu>
+        </MenuBar>
+    </top>
+</BorderPane>
